@@ -1,6 +1,6 @@
 # EMEWS tutorial
 
-Link to GitHub IO page: https://jozik.github.io/emews_next_gen_tutorial_tests/
+Link to GitHub IO page: https://emews.org/emews-tutorial/
 
 To build the site, simply setup asciidoctor (see below) and run:
 
@@ -8,7 +8,7 @@ To build the site, simply setup asciidoctor (see below) and run:
 $ scripts/build_site.sh
 ----
 
-The site is live at https://jozik.github.io/emews_next_gen_tutorial_tests
+The site is live at https://emews.org/emews-tutorial/
 and accessible via http://emews.org
 
 ## Developer setup
