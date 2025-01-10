@@ -1,4 +1,4 @@
-# EMEWS tutorial
+# EMEWS Tutorial
 
 Link to GitHub IO page: https://emews.org/emews-tutorial/
 
