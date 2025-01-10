@@ -65,10 +65,12 @@ This tutorial aims to describe through examples the following main elements of t
 The example use cases presented in this tutorial can be found here:
 //TODO: uncomment uc2 and uc3 when complete
 
-* https://github.com/emews/emews-tutorial-code/tree/main/uc1[UC1,window=UC1,pts="noopener,nofollow"]
+* https://github.com/emews/emews-tutorial-code/tree/main/uc1[Use Case 1 (UC1),window=UC1,pts="noopener,nofollow"]
 //* https://github.com/jozik/emews_next_gen_tutorial_tests/tree/main/code/uc2[UC2,window=UC2,pts="noopener,nofollow"]
 //* https://github.com/jozik/emews_next_gen_tutorial_tests/tree/main/code/uc3[UC3,window=UC3,pts="noopener,nofollow"]
-* https://github.com/emews/emews-tutorial-code/tree/main/uc4[UC4,window=UC4,pts="noopener,nofollow"]
+* https://github.com/emews/emews-tutorial-code/tree/main/uc4[Use Case 4 (UC4),window=UC4,pts="noopener,nofollow"]
+
+Additional examples can be found in https://github.com/emews/emews_tutorial_BO[this,window=tutorial_BO,pts="noopener,nofollow"] repository that accompanies our 2024 Winter Simulation Conference paper cite:[collier_emews_tutorial_2024], where we provide more complex worked examples of optimizing a simple simulation model (a https://repast.github.io/repast4py.site/guide/user_guide.html#_tutorial_3_the_zombies_model[Zombies demonstration model,window=ZombiesDemo,pts="noopener,nofollow"], distributed with https://repast.github.io/repast4py.site"[Repast4Py,window=Repast4Py,pts="noopener,nofollow"]) using EQ-SQL. Both Python and R Bayesian optimization code are demonstrated, with both a local and remote deployment.
 
 ==== EMEWS Mailing List
 For questions about EMEWS or to access archived questions, please subscribe to the EMEWS mailing list:
