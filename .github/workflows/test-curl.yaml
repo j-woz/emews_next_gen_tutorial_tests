@@ -25,8 +25,8 @@ jobs:
           echo
       - name: Download scripts
         run: |
-          curl -L -O https://raw.githubusercontent.com/jozik/emews_next_gen_tutorial_tests/main/code/install/install_emews.sh
-          curl -L -O https://raw.githubusercontent.com/jozik/emews_next_gen_tutorial_tests/main/code/install/install_pkgs.R
+          curl -L -O https://raw.githubusercontent.com/emews/emews-tutorial/main/code/install/install_emews.sh
+          curl -L -O https://raw.githubusercontent.com/emews/emews-tutorial/main/code/install/install_pkgs.R
       - name: Set up GitHub PAT
         # Set up PAT for R install_github()
         run: |
