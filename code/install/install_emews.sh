@@ -18,7 +18,7 @@ else
 fi
 
 function start_step {
-    if (( ${#AUTO_TEST} ))
+    if (( ! ${#AUTO_TEST} ))
     then
         # Normal shell run
         echo -en "[ ] $1 "
@@ -29,7 +29,7 @@ function start_step {
 }
 
 function end_step {
-    if (( ${#AUTO_TEST} ))
+    if (( ! ${#AUTO_TEST} ))
     then
         # Normal shell run - overwrite last line and show check mark
         echo -e "\r[\xE2\x9C\x94] $1 "
@@ -154,17 +154,25 @@ conda create -y -n $ENV_NAME python=${PY_VERSION} > "$EMEWS_INSTALL_LOG" 2>&1 ||
 end_step "$TEXT"
 
 TEXT="Activating conda environment"
+if (( ${#AUTO_TEST} ))
+then
+    echo "activating: $CONDA_BIN_DIR/activate '$ENV_NAME'"
+fi
+
 start_step "$TEXT"
-echo "activating: $CONDA_BIN_DIR/activate '$ENV_NAME'"
 if ! [[ -f $CONDA_BIN_DIR/activate ]]
 then
     on_error "File not found: '$CONDA_BIN_DIR/activate'"
 fi
 source $CONDA_BIN_DIR/activate $ENV_NAME || on_error "$TEXT"
 end_step "$TEXT"
-echo "python:  " $(which python)
-echo "version: " $(python -V)
-echo "conda:   " $(which conda)
+
+if (( ${#AUTO_TEST} ))
+then
+    echo "python:  " $(which python)
+    echo "version: " $(python -V)
+    echo "conda:   " $(which conda)
+fi
 
 # !! conda activate $ENV_NAME doesn't work within the script
 TEXT="Installing swift-t conda package"
@@ -220,6 +228,7 @@ end_step "$TEXT"
 # Rscript $THIS/install_eq_sql.R >> "$EMEWS_INSTALL_LOG" 2>&1 || on_error "$TEXT" "$EMEWS_INSTALL_LOG"
 # end_step "$TEXT"
 
+echo
 echo "#"
 echo "# EMEWS installation successful!"
 echo "#"
@@ -238,7 +247,6 @@ echo "#"
 echo "# To deactivate an active environment, use"
 echo "#"
 echo "#     $ conda deactivate"
-
 
 # Local Variables:
 # sh-basic-offset: 4
