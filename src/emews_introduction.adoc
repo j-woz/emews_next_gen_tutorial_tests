@@ -7,7 +7,7 @@ such studies at the requisite computational scales is often unnecessarily time-c
 software artifacts are typically difficult to generalize and
 package for other users.
 
-In this tutorial, we present a solution for many of the challenges in running large-scale ME studies.  Our framework, Extreme-scale Model Exploration with Swift (*EMEWS*) cite:[ozik_desktop_2016], provides ready-to-use workflows developed in the general-purpose parallel scripting language Swift/T cite:[wozniak_swiftt_2013].  These workflows are designed so that most of the interesting control logic is performed in the mathematically-oriented ME.  The general-purpose nature of the programming model also allows the user to supplement the workflows with additional analyses and post-processing.  The <<swift_usage,Appendix: Using Swift/T>> is provided for cases in which customized use of Swift/T is required.
+In this tutorial, we present a solution for many of the challenges in running large-scale ME studies.  Our framework, Extreme-scale Model Exploration with Swift (*EMEWS*) cite:[ozik_desktop_2016,collier_distributed_2024], provides ready-to-use workflows developed in the general-purpose parallel scripting language Swift/T cite:[wozniak_swiftt_2013].  These workflows are designed so that most of the interesting control logic is performed in the mathematically-oriented ME.  The general-purpose nature of the programming model also allows the user to supplement the workflows with additional analyses and post-processing.  The <<swift_usage,Appendix: Using Swift/T>> is provided for cases in which customized use of Swift/T is required.
 
 Our focus is on computational models that require the use of approximate, heuristic ME methods involving large ensembles. To improve the current state of the art it has been noted elsewhere that: “...
 there is a clear need to provide software frameworks for
@@ -78,10 +78,14 @@ https://lists.mcs.anl.gov/mailman/listinfo/emews[,window=mailinglist,pts="noopen
 
 ==== Citing EMEWS
 
-To cite EMEWS, please use:
+To *cite EMEWS*, please use:
 
 bibitem:[ozik_desktop_2016]
 
+
+Additionally, if you use the *EMEWS Creator*, *conda-based binary installations*, or *EMEWS DB* capabilities, please cite:
+
+bibitem:[collier_distributed_2024]
 
 ==== Acknowledgments
 Research reported in this website was supported by the National Science Foundation (2200234), the National Institutes of Health (R01GM115839, R01DA039934, R01DA055502), the U.S. Department of Energy, Office of Science, under contract number DE-AC02-06CH11357, and the DOE Office of Science through the Bio-preparedness Research Virtual Environment (BRaVE) initiative. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Science Foundation or the National Institutes of Health.
