@@ -18,7 +18,8 @@ emews creator <<eqsql_top,eqsql>> template, and that should be read before this.
 
 [NOTE]
 ====
-This use case assumes that you have already installed EMEWS. See the <<quickstart,Quickstart section>> for how to do this with a simple binary install on your local setup. For non-binary installations or for installing on HPC resources, see the <<emews_install, EMEWS Install section>>. A Python (and optionally R) enabled Swift/T installation will be required.
+This use case assumes that you have already installed EMEWS. See the <<quickstart,Quickstart section>> for how to do this with a simple binary install on your local setup. For non-binary installations or for installing on HPC resources, see the <<emews_install, EMEWS Install section>>. A Python (and optionally R) enabled Swift/T installation will be required. The ME code also requires 3 additional Python packages `numpy`, `scipy`, and `scikit-learn`. These can
+be installed with `conda` if using the local binary install: `conda install numpy scipy scikit-learn`, or with `pip` if you are not using a conda environment: `pip install numpy scipy scikit-learn`.
 ====
 
 === Tutorial Goals
@@ -29,11 +30,15 @@ This use case assumes that you have already installed EMEWS. See the <<quickstar
 
 === Running the Workflow
 
-
 The workflow can be run using the https://github.com/emews/emews-tutorial-code/blob/main/uc4/python/me.py#L1[`uc4/python/me.py`,window=me,pts="noopener,nofollow"] python script. It takes two arguments:
 
 1. An experiment id, e.g. "test_ackley".
-2. The path to the ME configuration file, i.e., `uc4/python/me_cfg.yaml`
+2. The path to the ME configuration file, i.e., `uc4/python/me_cfg.yaml`. 
+
+[NOTE]
+====
+Before running the example, edit the `db_path` entry in `uc4/python/me_cfg.yaml` to point to your EMEWS database location.
+====
 
 For example,
 
@@ -44,10 +49,8 @@ $ python3 me.py test_ackley me_cfg.yaml
 ----
 
 Running the workflow will create an experiment directory whose name 
-consists of th experiment id followed by a timestamp. The workflow runs 
+consists of the experiment id followed by a timestamp. The workflow runs 
 within this directory.
-
-
 
 === Workflow Project Structure
 The full source code for this use case can be accessed https://github.com/emews/emews-tutorial-code/tree/main/uc4[here,window=uc4,pts="noopener,nofollow"].
